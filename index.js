@@ -39,13 +39,32 @@ const products = [
 ];
 
 for (let index = 0; index < alumns.length; index++) {
+    
     alumn = alumns[index];
   
     let approvedCount = 0;
     approvedCount = alumn.T1 ? approvedCount + 1 : approvedCount;
     approvedCount = alumn.T2 ? approvedCount + 1 : approvedCount;
     approvedCount = alumn.T3 ? approvedCount + 1 : approvedCount;
+    
     alumn.isApproved = approvedCount >= 2 ? true : false;
   }
   
   console.log(alumns);
+
+// Iteration 3
+
+/* Usa un bucle forof para recorrer todos los destinos del array. Imprime en un onsole.log sus valores. */
+
+const placesToTravel = [
+    "Japon",
+    "Venecia",
+    "Murcia",
+    "Santander",
+    "Filipinas",
+    "Madagascar",
+  ];
+  
+  for (const place of placesToTravel) {
+    console.log(place);
+  }
