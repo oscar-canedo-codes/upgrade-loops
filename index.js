@@ -54,7 +54,7 @@ for (let index = 0; index < alumns.length; index++) {
 
 // Iteration 3
 
-/* Usa un bucle forof para recorrer todos los destinos del array. Imprime en un onsole.log sus valores. */
+/* Usa un bucle forof para recorrer todos los destinos del array. Imprime en un console.log sus valores. */
 
 const placesToTravel = [
     "Japon",
@@ -71,6 +71,8 @@ const placesToTravel = [
 
 // Iteration 4
 
+/* Usa un for...in para imprimir por consola los datos del alienígena */
+
 const alien = {
     name: "Wormuck",
     race: "Cucusumusu",
@@ -81,3 +83,24 @@ const alien = {
   for (const key in alien) {
     console.log("Propiedad: " + key + ", valor: " + alien[key]);
   }
+
+// Iteration 5
+
+/* Usa un bucle for para recorrer todos los destinos del array y elima los elementos que tengan el id 11 y 40. Imprime en un console log el array */ 
+
+const sitesToSee = [
+    { id: 5, name: "Japan" },
+    { id: 11, name: "Venecia" },
+    { id: 23, name: "Murcia" },
+    { id: 40, name: "Santander" },
+    { id: 44, name: "Filipinas" },
+    { id: 59, name: "Madagascar" },
+  ];
+  
+  for (let i = 0; i < sitesToSee.length; i++) {
+    const sites = sitesToSee[i];
+    if (sites.id === 11 || sites.id === 40) {
+      sitesToSee.splice(i, 1);
+    }
+  }
+  console.log(sitesToSee);
